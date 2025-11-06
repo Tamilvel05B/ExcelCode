@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Excel Formula Mastery - Complete 27 Slides</title>
+<style>
+@media print {
+    @page { size: 960px 680px; margin: 0; }
+    .slide { page-break-after: always; }
+    .slide:last-child { page-break-after: auto; }
+}
+.slide {
+    width: 960px;
+    height: 680px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #CCC;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    font-family: Arial, sans-serif;
+}
+.slide-number {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    background: #0066CC;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+h1 { font-size: 24px; color: #0066CC; margin: 0 0 10px 0; font-weight: bold; }
+.syntax { background: #003366; color: white; padding: 10px 14px; border-radius: 8px; text-align: center; font-family: 'Courier New', monospace; font-size: 15px; font-weight: bold; margin: 8px 0; }
+.explain { background: #E6F2FF; border-left: 4px solid #0066CC; padding: 8px 12px; margin: 12px 0; font-size: 16px; }
+.exptitle { font-weight: bold; font-size: 16px; margin-bottom: 4px; color: #0066CC; }
+.param { margin: 3px 0 3px 12px; font-size: 16px; line-height: 1.4; }
+.example { background: #F5F5F5; border: 2px solid #CCC; padding: 8px; text-align: center; font-family: 'Courier New', monospace; font-size: 16px; margin: 8px 0; font-weight: bold; }
+.content { display: table; width: 100%; margin: 15px 0; }
+.tableside { display: table-cell; width: 65%; vertical-align: top; padding-right: 10px; }
+.resultside { display: table-cell; width: 35%; vertical-align: top; }
+.tablebox { background: #F8F8F8; border: 2px solid #CCC; padding: 6px; border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 16px; }
+th { background: #0066CC; color: white; padding: 5px; text-align: left; font-size: 12px; }
+td { padding: 5px; border-bottom: 1px solid #DDD; }
+.highlight { background: #FFFF00; font-weight: bold; }
+.result { background: #E6F9F0; border: 2px solid #00CC66; padding: 10px; text-align: center; border-radius: 6px; }
+.reslabel { font-size: 12px; margin-bottom: 4px; font-weight: bold; color: #006633; }
+.resvalue { font-size: 22px; font-weight: bold; color: #006633; margin: 5px 0; }
+.resnote { font-size: 13px; font-weight: bold; color: #006633; margin-top: 4px; }
+.howbox { background: #FFF9E6; border-left: 4px solid #FF9900; padding: 6px 10px; font-size: 14px; margin: 8px 0; line-height: 1.5; }
+.howtitle { font-weight: bold; font-size: 10px; margin-bottom: 3px; color: #FF9900; }
+.inforow { display: table; width: 100%; margin-top: 8px; }
+.infocol { display: table-cell; width: 33.33%; padding: 0 4px; vertical-align: top; }
+.usebox { background: #E6E6FF; border-left: 4px solid #6666FF; padding: 6px 8px; font-size: 15px; border-radius: 4px; min-height: 60px; }
+.probox { background: #E6F9F0; border-left: 4px solid #00CC66; padding: 6px 8px; font-size: 15px; border-radius: 4px; min-height: 60px; }
+.conbox { background: #FFE6CC; border-left: 4px solid #FF9900; padding: 6px 8px; font-size: 15px; border-radius: 4px; min-height: 60px; }
+.infotitle { font-weight: bold; font-size: 10px; margin-bottom: 3px; }
+.instructions {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #F0F8FF;
+    border: 2px solid #0066CC;
+    border-radius: 10px;
+}
+.instructions h2 { color: #0066CC; margin-top: 0; }
+.instructions p { line-height: 1.6; }
+.compbox { background: #F0F0F0; border: 2px solid #666; padding: 8px; margin: 6px 0; border-radius: 4px; }
+.comptitle { font-weight: bold; font-size: 11px; color: #333; margin-bottom: 4px; }
+.compitem { font-size: 9px; margin: 3px 0; padding: 3px 6px; background: white; border-left: 3px solid #0066CC; }
+</style>
+</head>
+<body>
+<!-- Slide 1: Cover -->
+<div class="slide">
+<div style="text-align: center; padding-top: 70px;">
+<h1 style="font-size: 52px; color: #0066CC; margin-bottom: 20px;">📊 Excel Formula Mastery</h1>
+<p style="font-size: 24px; margin-bottom: 30px; color: #333;">Complete Guide with Syntax, Examples & Use Cases</p>
+<div style="background: #FFCC00; display: inline-block; padding: 18px 35px; border-radius: 25px; font-size: 20px; font-weight: bold; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+27 Slides • 25+ Formulas • Become an Excel Master
+</div>
+<div style="margin-top: 35px;">
+<span style="background: #E6F2FF; padding: 12px 22px; margin: 0 8px; border-radius: 12px; font-size: 16px; font-weight: bold; display: inline-block; margin-bottom: 10px;">VLOOKUP & XLOOKUP</span>
+<span style="background: #E6F2FF; padding: 12px 22px; margin: 0 8px; border-radius: 12px; font-size: 16px; font-weight: bold; display: inline-block; margin-bottom: 10px;">INDEX MATCH</span>
+<span style="background: #E6F2FF; padding: 12px 22px; margin: 0 8px; border-radius: 12px; font-size: 16px; font-weight: bold; display: inline-block; margin-bottom: 10px;">SUMIFS & COUNTIFS</span>
+</div>
+<div style="margin-top: 10px;">
+<span style="background: #E6F2FF; padding: 12px 22px; margin: 0 8px; border-radius: 12px; font-size: 16px; font-weight: bold; display: inline-block;">TEXT & DATE Functions</span>
+<span style="background: #E6F2FF; padding: 12px 22px; margin: 0 8px; border-radius: 12px; font-size: 16px; font-weight: bold; display: inline-block;">LET & MAP</span>
+</div>
+</div>
+</div>
+
+<!-- Slide 2: VLOOKUP -->
+<div class="slide">
+<div class="slide-number">2/27</div>
+<h1>📋 VLOOKUP - Vertical Lookup</h1>
+<div class="syntax">=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>lookup_value:</strong> The value you want to find</div>
+<div class="param"><strong>table_array:</strong> The range where data is located</div>
+<div class="param"><strong>col_index_num:</strong> Column number to return value from (starts at 1)</div>
+<div class="param"><strong>range_lookup:</strong> FALSE for exact match, TRUE for approximate</div>
+</div>
+<div class="example">=VLOOKUP(102, A2:C4, 3, FALSE)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+<tr><td>101</td><td>John</td><td>$50,000</td></tr>
+<tr><td class="highlight">102</td><td>Sarah</td><td class="highlight">$60,000</td></tr>
+<tr><td>103</td><td>Mike</td><td>$55,000</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$60,000</div>
+<div class="resnote">Finds ID 102, returns Salary</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Searches for 102 in first column → Finds match in row 3 → Moves to column 3 → Returns $60,000
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Price lookups<br>• Employee data<br>• Inventory matching<br>• Customer info
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Easy to learn<br>• Widely known<br>• Fast for small data<br>• Simple syntax
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only left-to-right<br>• Breaks if columns move<br>• Cannot look left<br>• Rigid column numbers
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 3: HLOOKUP -->
+<div class="slide">
+<div class="slide-number">3/27</div>
+<h1>📊 HLOOKUP - Horizontal Lookup</h1>
+<div class="syntax">=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>lookup_value:</strong> The value you want to find</div>
+<div class="param"><strong>table_array:</strong> The range where data is located (horizontal)</div>
+<div class="param"><strong>row_index_num:</strong> Row number to return value from (starts at 1)</div>
+<div class="param"><strong>range_lookup:</strong> FALSE for exact match, TRUE for approximate</div>
+</div>
+<div class="example">=HLOOKUP("Feb", A1:D3, 3, FALSE)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Month</th><th>Jan</th><th class="highlight">Feb</th><th>Mar</th></tr>
+<tr><th>Revenue</th><td>$50K</td><td>$60K</td><td>$55K</td></tr>
+<tr><th>Expenses</th><td>$30K</td><td class="highlight">$35K</td><td>$32K</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$35K</div>
+<div class="resnote">Finds Feb, returns Expenses</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Searches for "Feb" in first row → Finds match in column 3 → Moves down to row 3 → Returns $35K
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Monthly data<br>• Time-series analysis<br>• Cross-tabs<br>• Horizontal datasets
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Works with horizontal data<br>• Similar to VLOOKUP<br>• Good for wide tables<br>• Simple logic
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only top-to-bottom<br>• Less common than VLOOKUP<br>• Rigid row numbers<br>• Breaks easily
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 4: XLOOKUP -->
+<div class="slide">
+<div class="slide-number">4/27</div>
+<h1>🚀 XLOOKUP - Modern Lookup (Excel 365)</h1>
+<div class="syntax">=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>lookup_value:</strong> The value to search for</div>
+<div class="param"><strong>lookup_array:</strong> The range to search in</div>
+<div class="param"><strong>return_array:</strong> The range to return values from</div>
+<div class="param"><strong>if_not_found:</strong> Value to return if not found (optional)</div>
+</div>
+<div class="example">=XLOOKUP(102, A2:A4, C2:C4, "Not Found")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+<tr><td class="highlight">101</td><td>John</td><td>$50,000</td></tr>
+<tr><td>102</td><td>Sarah</td><td class="highlight">$60,000</td></tr>
+<tr><td>103</td><td>Mike</td><td>$55,000</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$60,000</div>
+<div class="resnote">Directly returns from any column</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Searches for 102 in lookup_array (A2:A4) → Finds match → Returns corresponding value from return_array (C2:C4) → No column counting needed!
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• All VLOOKUP tasks<br>• Left lookups<br>• Error handling<br>• Dynamic ranges
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Works both directions<br>• No column counting<br>• Built-in error handling<br>• More flexible
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 365 only<br>• Not in older versions<br>• Learning curve<br>• Compatibility issues
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 5: INDEX -->
+<div class="slide">
+<div class="slide-number">5/27</div>
+<h1>🎯 INDEX - Return Value by Position</h1>
+<div class="syntax">=INDEX(array, row_num, [column_num])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>array:</strong> The range of cells to search in</div>
+<div class="param"><strong>row_num:</strong> The row number in the array</div>
+<div class="param"><strong>column_num:</strong> The column number in the array (optional)</div>
+</div>
+<div class="example">=INDEX(B2:B4, 2)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+<tr><td>101</td><td>John</td><td>$50,000</td></tr>
+<tr><td>102</td><td class="highlight">Sarah</td><td>$60,000</td></tr>
+<tr><td>103</td><td>Mike</td><td>$55,000</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">Returns 2nd value from Name column (B2:B4)</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">Sarah</div>
+<div class="resnote">2nd row of the array</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Takes the array B2:B4 (John, Sarah, Mike) → Selects row 2 from this array → Returns "Sarah"
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Return nth item<br>• Combined with MATCH<br>• Dynamic ranges<br>• Array formulas
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Very flexible<br>• Works any direction<br>• Powerful with MATCH<br>• No counting columns
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Needs row number<br>• Usually paired with MATCH<br>• More complex syntax<br>• Not standalone
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 6: MATCH -->
+<div class="slide">
+<div class="slide-number">6/27</div>
+<h1>🔍 MATCH - Find Position of Value</h1>
+<div class="syntax">=MATCH(lookup_value, lookup_array, [match_type])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>lookup_value:</strong> The value to search for</div>
+<div class="param"><strong>lookup_array:</strong> The range to search in</div>
+<div class="param"><strong>match_type:</strong> 0 = exact, 1 = less than, -1 = greater than</div>
+</div>
+<div class="example">=MATCH(102, A2:A4, 0)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+<tr><td>101</td><td>John</td><td>$50,000</td></tr>
+<tr><td class="highlight">102</td><td>Sarah</td><td>$60,000</td></tr>
+<tr><td>103</td><td>Mike</td><td>$55,000</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">Finds position of 102 in A2:A4</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">2</div>
+<div class="resnote">102 is in position 2</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Searches for 102 in array A2:A4 → Finds it in the 2nd position → Returns the number 2
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Find position<br>• Combined with INDEX<br>• Dynamic lookups<br>• Position tracking
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Returns position number<br>• Works horizontally/vertically<br>• Essential for INDEX<br>• Very flexible
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only returns position<br>• Needs INDEX for value<br>• Not standalone<br>• More complex
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 7: INDEX MATCH (Row) -->
+<div class="slide">
+<div class="slide-number">7/27</div>
+<h1>⚡ INDEX-MATCH (Row Lookup)</h1>
+<div class="syntax">=INDEX(return_range, MATCH(lookup_value, lookup_range, 0))</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>MATCH:</strong> Finds the row position of the lookup value</div>
+<div class="param"><strong>INDEX:</strong> Returns the value from that row position</div>
+<div class="param">This replaces VLOOKUP and can look left!</div>
+</div>
+<div class="example">=INDEX(C2:C4, MATCH(102, A2:A4, 0))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+<tr><td>101</td><td>John</td><td>$50,000</td></tr>
+<tr><td class="highlight">102</td><td>Sarah</td><td class="highlight">$60,000</td></tr>
+<tr><td>103</td><td>Mike</td><td>$55,000</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">MATCH finds 102 in row 2, INDEX returns salary from row 2</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$60,000</div>
+<div class="resnote">Better than VLOOKUP!</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+MATCH finds 102 in A2:A4 → Returns position 2 → INDEX goes to position 2 in C2:C4 → Returns $60,000
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• All VLOOKUP tasks<br>• Left lookups<br>• Flexible searches<br>• Professional models
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Works both directions<br>• No column counting<br>• Won't break easily<br>• More robust
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• More complex syntax<br>• Harder to learn<br>• Requires two functions<br>• Longer formula
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 8: INDEX MATCH (2D) -->
+<div class="slide">
+<div class="slide-number">8/27</div>
+<h1>🎯 INDEX-MATCH (2D - Row & Column)</h1>
+<div class="syntax">=INDEX(array, MATCH(row_value, row_range, 0), MATCH(col_value, col_range, 0))</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>First MATCH:</strong> Finds the row position</div>
+<div class="param"><strong>Second MATCH:</strong> Finds the column position</div>
+<div class="param"><strong>INDEX:</strong> Returns value at intersection of row and column</div>
+</div>
+<div class="example">=INDEX(B2:D4, MATCH("Sarah", A2:A4, 0), MATCH("Bonus", B1:D1, 0))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Name</th><th>Salary</th><th class="highlight">Bonus</th><th>Total</th></tr>
+<tr><td>John</td><td>$50K</td><td>$5K</td><td>$55K</td></tr>
+<tr><td class="highlight">Sarah</td><td>$60K</td><td class="highlight">$8K</td><td>$68K</td></tr>
+<tr><td>Mike</td><td>$55K</td><td>$6K</td><td>$61K</td></tr>
+</table>
+<div style="margin-top: 4px; font-size: 8px; color: #666;">Row: Sarah (row 2), Column: Bonus (col 2) = $8K</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$8K</div>
+<div class="resnote">2D lookup complete!</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Row MATCH finds "Sarah" = position 2 → Column MATCH finds "Bonus" = position 2 → INDEX returns value at (row 2, col 2) = $8K
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Matrix lookups<br>• Cross-tabulation<br>• Dynamic reports<br>• Complex searches
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Ultimate flexibility<br>• Both row & column<br>• Fully dynamic<br>• Professional standard
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Complex formula<br>• Harder to understand<br>• Longer syntax<br>• Requires practice
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 9: SUMIF -->
+<div class="slide">
+<div class="slide-number">9/27</div>
+<h1>➕ SUMIF - Conditional Sum</h1>
+<div class="syntax">=SUMIF(range, criteria, [sum_range])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>range:</strong> The range to check for criteria</div>
+<div class="param"><strong>criteria:</strong> The condition that must be met</div>
+<div class="param"><strong>sum_range:</strong> The range to sum (if different from range)</div>
+</div>
+<div class="example">=SUMIF(B2:B6, "East", C2:C6)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Product</th><th>Region</th><th>Sales</th></tr>
+<tr><td>Widget</td><td class="highlight">East</td><td class="highlight">$500</td></tr>
+<tr><td>Gadget</td><td>West</td><td>$700</td></tr>
+<tr><td>Tool</td><td class="highlight">East</td><td class="highlight">$600</td></tr>
+<tr><td>Device</td><td class="highlight">East</td><td class="highlight">$400</td></tr>
+<tr><td>Part</td><td>West</td><td>$550</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$1,500</div>
+<div class="resnote">Sum of East sales only</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks Region column (B2:B6) for "East" → Finds 3 matches → Sums corresponding Sales values ($500 + $600 + $400) = $1,500
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Regional totals<br>• Category sums<br>• Filtered totals<br>• Department analysis
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Simple to use<br>• Fast calculation<br>• One criterion<br>• Widely supported
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only one condition<br>• Use SUMIFS for multiple<br>• Less flexible<br>• Limited logic
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 10: SUMIFS -->
+<div class="slide">
+<div class="slide-number">10/27</div>
+<h1>➕ SUMIFS - Multiple Criteria Sum</h1>
+<div class="syntax">=SUMIFS(sum_range, criteria_range1, criteria1, [cr2, c2]...)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>sum_range:</strong> The range to sum</div>
+<div class="param"><strong>criteria_range1:</strong> First range to check</div>
+<div class="param"><strong>criteria1:</strong> First condition</div>
+<div class="param"><strong>Add more pairs of criteria_range and criteria as needed</strong></div>
+</div>
+<div class="example">=SUMIFS(D2:D6, B2:B6, "East", C2:C6, ">500")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Product</th><th>Region</th><th>Price</th><th>Sales</th></tr>
+<tr><td>Widget</td><td>East</td><td>450</td><td>$900</td></tr>
+<tr><td>Gadget</td><td class="highlight">East</td><td class="highlight">600</td><td class="highlight">$1,200</td></tr>
+<tr><td>Tool</td><td class="highlight">East</td><td class="highlight">550</td><td class="highlight">$1,100</td></tr>
+<tr><td>Device</td><td>West</td><td>650</td><td>$1,300</td></tr>
+<tr><td>Part</td><td>East</td><td>400</td><td>$800</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$2,300</div>
+<div class="resnote">East AND Price>500</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks Region="East" AND Price>500 → Finds Gadget ($1,200) and Tool ($1,100) → Sums = $2,300
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Multi-condition sums<br>• Complex filtering<br>• Detailed analysis<br>• Advanced reports
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Multiple criteria<br>• Very flexible<br>• AND logic<br>• Professional tool
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only AND logic<br>• Use SUM(IF(...)) for OR<br>• Longer syntax<br>• More complex
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 11: COUNTIF -->
+<div class="slide">
+<div class="slide-number">11/27</div>
+<h1>🔢 COUNTIF - Conditional Count</h1>
+<div class="syntax">=COUNTIF(range, criteria)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>range:</strong> The range to check</div>
+<div class="param"><strong>criteria:</strong> The condition to count</div>
+</div>
+<div class="example">=COUNTIF(B2:B6, "East")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Product</th><th>Region</th><th>Sales</th></tr>
+<tr><td>Widget</td><td class="highlight">East</td><td>$500</td></tr>
+<tr><td>Gadget</td><td>West</td><td>$700</td></tr>
+<tr><td>Tool</td><td class="highlight">East</td><td>$600</td></tr>
+<tr><td>Device</td><td class="highlight">East</td><td>$400</td></tr>
+<tr><td>Part</td><td>West</td><td>$550</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">3</div>
+<div class="resnote">Count of "East" entries</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks each cell in B2:B6 for "East" → Finds 3 matches → Returns count of 3
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Frequency counts<br>• Category totals<br>• Attendance tracking<br>• Status counting
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Very simple<br>• Fast counting<br>• Easy to understand<br>• Common use
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only one criterion<br>• Use COUNTIFS for multiple<br>• Limited logic<br>• Basic functionality
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 12: COUNTIFS -->
+<div class="slide">
+<div class="slide-number">12/27</div>
+<h1>🔢 COUNTIFS - Multiple Criteria Count</h1>
+<div class="syntax">=COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2]...)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>criteria_range1:</strong> First range to check</div>
+<div class="param"><strong>criteria1:</strong> First condition</div>
+<div class="param"><strong>Add more pairs of criteria_range and criteria as needed</strong></div>
+</div>
+<div class="example">=COUNTIFS(B2:B6, "East", C2:C6, ">500")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Product</th><th>Region</th><th>Sales</th></tr>
+<tr><td>Widget</td><td>East</td><td>$450</td></tr>
+<tr><td>Gadget</td><td class="highlight">East</td><td class="highlight">$700</td></tr>
+<tr><td>Tool</td><td class="highlight">East</td><td class="highlight">$600</td></tr>
+<tr><td>Device</td><td>West</td><td>$800</td></tr>
+<tr><td>Part</td><td>East</td><td>$400</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">2</div>
+<div class="resnote">East AND Sales>$500</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks Region="East" AND Sales>$500 → Finds Gadget and Tool → Returns count of 2
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Multi-criteria counts<br>• Complex filtering<br>• Data validation<br>• Advanced analytics
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Multiple conditions<br>• Flexible logic<br>• AND combinations<br>• Very powerful
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only AND logic<br>• Longer formulas<br>• More complex<br>• Requires understanding
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 13: AVERAGEIF -->
+<div class="slide">
+<div class="slide-number">13/27</div>
+<h1>📊 AVERAGEIF - Conditional Average</h1>
+<div class="syntax">=AVERAGEIF(range, criteria, [average_range])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>range:</strong> The range to check for criteria</div>
+<div class="param"><strong>criteria:</strong> The condition that must be met</div>
+<div class="param"><strong>average_range:</strong> The range to average (if different)</div>
+</div>
+<div class="example">=AVERAGEIF(B2:B6, "East", C2:C6)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Product</th><th>Region</th><th>Sales</th></tr>
+<tr><td>Widget</td><td class="highlight">East</td><td class="highlight">$500</td></tr>
+<tr><td>Gadget</td><td>West</td><td>$700</td></tr>
+<tr><td>Tool</td><td class="highlight">East</td><td class="highlight">$600</td></tr>
+<tr><td>Device</td><td class="highlight">East</td><td class="highlight">$400</td></tr>
+<tr><td>Part</td><td>West</td><td>$550</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$500</div>
+<div class="resnote">Avg of East sales</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Finds "East" entries → Calculates average of corresponding sales ($500 + $600 + $400) ÷ 3 = $500
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Regional averages<br>• Category means<br>• Performance metrics<br>• Filtered averages
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Simple syntax<br>• Quick calculations<br>• Easy to use<br>• Common need
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only one criterion<br>• Use AVERAGEIFS for multiple<br>• Basic logic<br>• Limited flexibility
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 14: AVERAGEIFS -->
+<div class="slide">
+<div class="slide-number">14/27</div>
+<h1>📊 AVERAGEIFS - Multiple Criteria Average</h1>
+<div class="syntax">=AVERAGEIFS(average_range, criteria_range1, criteria1, [cr2, c2]...)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>average_range:</strong> The range to average</div>
+<div class="param"><strong>criteria_range1:</strong> First range to check</div>
+<div class="param"><strong>criteria1:</strong> First condition</div>
+<div class="param"><strong>Add more pairs as needed for additional criteria</strong></div>
+</div>
+<div class="example">=AVERAGEIFS(C2:C6, A2:A6, "East", B2:B6, ">500")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Region</th><th>Sales</th><th>Score</th></tr>
+<tr><td>East</td><td>450</td><td>85</td></tr>
+<tr><td class="highlight">East</td><td class="highlight">700</td><td class="highlight">92</td></tr>
+<tr><td class="highlight">East</td><td class="highlight">600</td><td class="highlight">88</td></tr>
+<tr><td>West</td><td>800</td><td>95</td></tr>
+<tr><td>East</td><td>400</td><td>80</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">90</div>
+<div class="resnote">Avg: East & Sales>500</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Finds Region="East" AND Sales>500 → Identifies 2 matches → Calculates average score (92 + 88) ÷ 2 = 90
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Complex averages<br>• Filtered analysis<br>• Performance metrics<br>• Multi-condition stats
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Multiple criteria<br>• Very flexible<br>• AND logic<br>• Powerful analysis
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only AND logic<br>• Complex syntax<br>• Longer formulas<br>• Requires practice
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 15: IF -->
+<div class="slide">
+<div class="slide-number">15/27</div>
+<h1>❓ IF - Logical Test</h1>
+<div class="syntax">=IF(logical_test, value_if_true, value_if_false)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>logical_test:</strong> The condition to check (TRUE or FALSE)</div>
+<div class="param"><strong>value_if_true:</strong> Result if condition is TRUE</div>
+<div class="param"><strong>value_if_false:</strong> Result if condition is FALSE</div>
+</div>
+<div class="example">=IF(B2>=60, "Pass", "Fail")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Student</th><th>Score</th><th>Result</th></tr>
+<tr><td>Alice</td><td class="highlight">75</td><td class="highlight">Pass</td></tr>
+<tr><td>Bob</td><td>45</td><td>Fail</td></tr>
+<tr><td>Carol</td><td class="highlight">82</td><td class="highlight">Pass</td></tr>
+<tr><td>David</td><td>58</td><td>Fail</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">FOR ALICE</div>
+<div class="resvalue">Pass</div>
+<div class="resnote">Score 75 >= 60</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks if Score >= 60 → If TRUE returns "Pass" → If FALSE returns "Fail" → Alice scored 75, so result is "Pass"
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Pass/Fail<br>• Yes/No decisions<br>• Status checks<br>• Conditional output
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Most common formula<br>• Simple logic<br>• Easy to understand<br>• Universal use
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Only one condition<br>• Nest for multiple<br>• Can get complex<br>• Limited to 2 outcomes
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 16: Nested IF -->
+<div class="slide">
+<div class="slide-number">16/27</div>
+<h1>❓❓ Nested IF - Multiple Conditions</h1>
+<div class="syntax">=IF(test1, result1, IF(test2, result2, IF(test3, result3, default)))</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>Multiple IF functions nested inside each other</strong></div>
+<div class="param"><strong>Each IF handles one condition, then another IF in the FALSE part</strong></div>
+<div class="param"><strong>Can have up to 64 levels (but keep it simple!)</strong></div>
+</div>
+<div class="example">=IF(B2>=90, "A", IF(B2>=80, "B", IF(B2>=70, "C", "F")))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Student</th><th>Score</th><th>Grade</th></tr>
+<tr><td>Alice</td><td class="highlight">92</td><td class="highlight">A</td></tr>
+<tr><td>Bob</td><td>85</td><td>B</td></tr>
+<tr><td>Carol</td><td>73</td><td>C</td></tr>
+<tr><td>David</td><td>65</td><td>F</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 8px; color: #666;">>=90: A | >=80: B | >=70: C | else: F</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">FOR ALICE</div>
+<div class="resvalue">A</div>
+<div class="resnote">Score 92 >= 90</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Check 1: Score >= 90? YES → Return "A" | If NO → Check 2: Score >= 80? → If NO → Check 3: Score >= 70? → If NO → Return "F"
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Letter grades<br>• Tier categorization<br>• Multi-level status<br>• Complex decisions
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Multiple conditions<br>• Sequential logic<br>• Versatile<br>• Widely compatible
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Gets very complex<br>• Hard to read<br>• Error-prone<br>• Use IFS instead!
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 17: IFS -->
+<div class="slide">
+<div class="slide-number">17/27</div>
+<h1>✅ IFS - Multiple Conditions Simplified</h1>
+<div class="syntax">=IFS(test1, result1, test2, result2, test3, result3, ...)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>Much cleaner than nested IF!</strong></div>
+<div class="param"><strong>List condition-result pairs in sequence</strong></div>
+<div class="param"><strong>Returns result of first TRUE condition</strong></div>
+<div class="param"><strong>Available in Excel 2019 and Excel 365</strong></div>
+</div>
+<div class="example">=IFS(B2>=90, "A", B2>=80, "B", B2>=70, "C", TRUE, "F")</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Student</th><th>Score</th><th>Grade</th></tr>
+<tr><td>Alice</td><td class="highlight">92</td><td class="highlight">A</td></tr>
+<tr><td>Bob</td><td>85</td><td>B</td></tr>
+<tr><td>Carol</td><td>73</td><td>C</td></tr>
+<tr><td>David</td><td>65</td><td>F</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 8px; color: #666;">Same result as nested IF but much cleaner!</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">FOR ALICE</div>
+<div class="resvalue">A</div>
+<div class="resnote">First TRUE: Score >= 90</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Checks conditions in order → First TRUE condition wins → Returns corresponding result → Use TRUE as final condition for default value
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Grading systems<br>• Tiered pricing<br>• Status categories<br>• Rating scales
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Clean syntax<br>• Easy to read<br>• Less error-prone<br>• Modern solution
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 2019+ only<br>• No backward compatibility<br>• Still sequential<br>• One TRUE wins
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 18: TEXT - LEFT, RIGHT, MID -->
+<div class="slide">
+<div class="slide-number">18/27</div>
+<h1>✂️ TEXT Functions - Extract Text</h1>
+<div style="margin-bottom: 8px;">
+<div class="syntax" style="margin: 4px 0;">=LEFT(text, num_chars)</div>
+<div class="syntax" style="margin: 4px 0;">=RIGHT(text, num_chars)</div>
+<div class="syntax" style="margin: 4px 0;">=MID(text, start_num, num_chars)</div>
+</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>LEFT:</strong> Extract characters from the beginning</div>
+<div class="param"><strong>RIGHT:</strong> Extract characters from the end</div>
+<div class="param"><strong>MID:</strong> Extract characters from the middle (start position + length)</div>
+</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Formula</th><th>Input</th><th>Result</th></tr>
+<tr><td>=LEFT("EXCEL2024", 5)</td><td class="highlight">EXCEL2024</td><td class="highlight">EXCEL</td></tr>
+<tr><td>=RIGHT("EXCEL2024", 4)</td><td class="highlight">EXCEL2024</td><td class="highlight">2024</td></tr>
+<tr><td>=MID("EXCEL2024", 6, 4)</td><td class="highlight">EXCEL2024</td><td class="highlight">2024</td></tr>
+</table>
+<div style="margin-top: 8px; font-size: 9px; color: #666;">
+LEFT gets first 5 chars | RIGHT gets last 4 chars | MID starts at position 6, gets 4 chars
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">EXAMPLE</div>
+<div class="resvalue" style="font-size: 16px;">EXCEL<br>2024<br>2024</div>
+</div>
+</div>
+</div>
+<div class="inforow" style="margin-top: 8px;">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Extract codes<br>• Parse IDs<br>• Split text<br>• Data cleanup
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Simple extraction<br>• Fast processing<br>• Widely supported<br>• Easy to combine
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Fixed positions<br>• No pattern matching<br>• Manual counting<br>• Not dynamic
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 19: TEXT - CONCATENATE & TEXTJOIN -->
+<div class="slide">
+<div class="slide-number">19/27</div>
+<h1>🔗 TEXT Functions - Join Text</h1>
+<div style="margin-bottom: 8px;">
+<div class="syntax" style="margin: 4px 0;">=CONCATENATE(text1, text2, ...) or use &</div>
+<div class="syntax" style="margin: 4px 0;">=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)</div>
+</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>CONCATENATE:</strong> Join multiple text strings (or use & operator)</div>
+<div class="param"><strong>TEXTJOIN:</strong> Join with delimiter, option to ignore empty cells</div>
+</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Formula</th><th>Result</th></tr>
+<tr><td>=A2&" "&B2</td><td class="highlight">John Smith</td></tr>
+<tr><td>=CONCATENATE(A2," ",B2)</td><td class="highlight">John Smith</td></tr>
+<tr><td>=TEXTJOIN(", ", TRUE, A2:C2)</td><td class="highlight">John, Smith, USA</td></tr>
+</table>
+<div style="margin-top: 8px; font-size: 10px;">
+<strong>Data:</strong> A2=John | B2=Smith | C2=USA
+</div>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">
+TEXTJOIN is more powerful - joins ranges with delimiters!
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">TEXTJOIN RESULT</div>
+<div class="resvalue" style="font-size: 14px;">John, Smith, USA</div>
+<div class="resnote">With comma delimiter</div>
+</div>
+</div>
+</div>
+<div class="inforow" style="margin-top: 8px;">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Full names<br>• Addresses<br>• Email lists<br>• Combined fields
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Simple joining<br>• TEXTJOIN is powerful<br>• Works with ranges<br>• Flexible delimiters
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• TEXTJOIN: Excel 2019+<br>• CONCATENATE verbose<br>• Use & for simple joins<br>• Character limits
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 20: DATE Functions -->
+<div class="slide">
+<div class="slide-number">20/27</div>
+<h1>📅 DATE & TIME Functions</h1>
+<div style="margin-bottom: 6px;">
+<div class="syntax" style="margin: 3px 0; font-size: 13px;">=TODAY() | =NOW() | =DATE(year, month, day)</div>
+<div class="syntax" style="margin: 3px 0; font-size: 13px;">=YEAR(date) | =MONTH(date) | =DAY(date)</div>
+</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>TODAY():</strong> Current date | <strong>NOW():</strong> Current date & time</div>
+<div class="param"><strong>DATE:</strong> Create date from parts | <strong>YEAR/MONTH/DAY:</strong> Extract parts</div>
+</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Formula</th><th>Example Result</th></tr>
+<tr><td>=TODAY()</td><td class="highlight">11/6/2025</td></tr>
+<tr><td>=NOW()</td><td class="highlight">11/6/2025 2:30 PM</td></tr>
+<tr><td>=DATE(2025, 11, 6)</td><td class="highlight">11/6/2025</td></tr>
+<tr><td>=YEAR(TODAY())</td><td class="highlight">2025</td></tr>
+<tr><td>=MONTH(TODAY())</td><td class="highlight">11</td></tr>
+<tr><td>=DAY(TODAY())</td><td class="highlight">6</td></tr>
+<tr><td>=TODAY() - B2</td><td class="highlight">15 days ago</td></tr>
+</table>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">TODAY()</div>
+<div class="resvalue" style="font-size: 16px;">11/6/2025</div>
+<div class="resnote">Updates automatically</div>
+</div>
+</div>
+</div>
+<div class="inforow" style="margin-top: 8px;">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Age calculations<br>• Days until/since<br>• Date tracking<br>• Time analysis
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Auto-updating<br>• Easy calculations<br>• Extract components<br>• Universal
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Date format issues<br>• Timezone considerations<br>• Manual date building<br>• Text conversion
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 21: OFFSET -->
+<div class="slide">
+<div class="slide-number">21/27</div>
+<h1>↗️ OFFSET - Dynamic Range Reference</h1>
+<div class="syntax">=OFFSET(reference, rows, cols, [height], [width])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>reference:</strong> Starting cell</div>
+<div class="param"><strong>rows:</strong> Number of rows to move (+ down, - up)</div>
+<div class="param"><strong>cols:</strong> Number of columns to move (+ right, - left)</div>
+<div class="param"><strong>height/width:</strong> Size of range to return (optional)</div>
+</div>
+<div class="example">=SUM(OFFSET(A1, 1, 0, 3, 1))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<table>
+<tr><th>Month</th><th>Sales</th></tr>
+<tr><td>Jan</td><td class="highlight">$100</td></tr>
+<tr><td>Feb</td><td class="highlight">$150</td></tr>
+<tr><td>Mar</td><td class="highlight">$200</td></tr>
+<tr><td>Apr</td><td>$175</td></tr>
+</table>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">
+Start at A1 → Move 1 row down → Get 3 rows × 1 column = B2:B4
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$450</div>
+<div class="resnote">Sum of B2:B4</div>
+</div>
+</div>
+</div>
+<div class="howbox">
+<div class="howtitle">HOW IT WORKS</div>
+Starts at A1 → Moves 1 row down, 0 columns → Creates range of height 3, width 1 → Returns B2:B4 → SUM calculates $450
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Dynamic ranges<br>• Moving averages<br>• Flexible dashboards<br>• Named ranges
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Fully dynamic<br>• Powerful with other formulas<br>• Creates ranges<br>• Very flexible
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Complex syntax<br>• Volatile (recalculates)<br>• Can be confusing<br>• Hard to debug
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 22: UNIQUE -->
+<div class="slide">
+<div class="slide-number">22/27</div>
+<h1>🎨 UNIQUE - Extract Unique Values</h1>
+<div class="syntax">=UNIQUE(array, [by_col], [exactly_once])</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>array:</strong> The range to get unique values from</div>
+<div class="param"><strong>by_col:</strong> FALSE = compare rows (default), TRUE = compare columns</div>
+<div class="param"><strong>exactly_once:</strong> TRUE = return values that appear only once</div>
+<div class="param"><strong>Available in Excel 365 only</strong></div>
+</div>
+<div class="example">=UNIQUE(A2:A8)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<div style="display: table; width: 100%;">
+<div style="display: table-cell; width: 50%; padding-right: 10px;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">INPUT DATA (A2:A8)</div>
+<table>
+<tr><th>Region</th></tr>
+<tr><td>East</td></tr>
+<tr><td>West</td></tr>
+<tr><td>East</td></tr>
+<tr><td>North</td></tr>
+<tr><td>West</td></tr>
+<tr><td>South</td></tr>
+<tr><td>East</td></tr>
+</table>
+</div>
+<div style="display: table-cell; width: 50%;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">UNIQUE OUTPUT</div>
+<table>
+<tr><th>Unique</th></tr>
+<tr><td class="highlight">East</td></tr>
+<tr><td class="highlight">West</td></tr>
+<tr><td class="highlight">North</td></tr>
+<tr><td class="highlight">South</td></tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue" style="font-size: 16px;">4 unique values</div>
+<div class="resnote">Removes duplicates automatically</div>
+</div>
+</div>
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Remove duplicates<br>• Dropdown lists<br>• Data validation<br>• Summary lists
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Auto-updates<br>• Dynamic array<br>• Spills results<br>• No manual work
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 365 only<br>• Spill errors possible<br>• No backward compatibility<br>• Requires space
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 23: LET -->
+<div class="slide">
+<div class="slide-number">23/27</div>
+<h1>🔤 LET - Name Variables in Formulas</h1>
+<div class="syntax">=LET(name1, value1, [name2, value2, ...], calculation)</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>name1, name2:</strong> Variable names (your choice)</div>
+<div class="param"><strong>value1, value2:</strong> Values or formulas to assign</div>
+<div class="param"><strong>calculation:</strong> Final formula using the named variables</div>
+<div class="param"><strong>Improves readability and performance! Excel 365 only</strong></div>
+</div>
+<div class="example">=LET(price, B2, qty, C2, total, price*qty, total*1.1)</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<div style="font-size: 10px; margin-bottom: 6px;"><strong>Without LET (messy):</strong></div>
+<div style="background: #FFE6E6; padding: 6px; font-family: 'Courier New', monospace; font-size: 9px; margin-bottom: 8px;">
+=B2*C2*1.1
+</div>
+<div style="font-size: 10px; margin-bottom: 6px;"><strong>With LET (clean & clear):</strong></div>
+<div style="background: #E6FFE6; padding: 6px; font-family: 'Courier New', monospace; font-size: 9px; margin-bottom: 8px;">
+=LET(price, B2, qty, C2, total, price*qty, total*1.1)
+</div>
+<table style="margin-top: 8px;">
+<tr><th>Product</th><th>Price</th><th>Qty</th><th>Final</th></tr>
+<tr><td>Widget</td><td>$10</td><td>5</td><td class="highlight">$55</td></tr>
+</table>
+<div style="margin-top: 4px; font-size: 8px; color: #666;">
+Variables: price=$10, qty=5, total=$50, result=$55 (with 10% markup)
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">RESULT</div>
+<div class="resvalue">$55</div>
+<div class="resnote">Clean, readable, efficient!</div>
+</div>
+</div>
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Complex calculations<br>• Reusable values<br>• Cleaner formulas<br>• Better performance
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• More readable<br>• Faster (calculates once)<br>• Named variables<br>• Easier debugging
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 365 only<br>• Learning curve<br>• Longer syntax<br>• Not widely known
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 24: MAP -->
+<div class="slide">
+<div class="slide-number">24/27</div>
+<h1>🗺️ MAP - Apply Formula to Each Value</h1>
+<div class="syntax">=MAP(array, LAMBDA(variable, calculation))</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>array:</strong> The range to process</div>
+<div class="param"><strong>LAMBDA:</strong> Anonymous function that defines the operation</div>
+<div class="param"><strong>variable:</strong> Placeholder for each value in the array</div>
+<div class="param"><strong>calculation:</strong> Formula to apply to each value</div>
+<div class="param"><strong>Excel 365 only - returns dynamic array</strong></div>
+</div>
+<div class="example">=MAP(B2:B5, LAMBDA(x, x*1.1))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<div style="display: table; width: 100%;">
+<div style="display: table-cell; width: 50%; padding-right: 10px;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">INPUT (B2:B5)</div>
+<table>
+<tr><th>Price</th></tr>
+<tr><td class="highlight">$100</td></tr>
+<tr><td class="highlight">$150</td></tr>
+<tr><td class="highlight">$200</td></tr>
+<tr><td class="highlight">$175</td></tr>
+</table>
+</div>
+<div style="display: table-cell; width: 50%;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">OUTPUT (10% increase)</div>
+<table>
+<tr><th>New Price</th></tr>
+<tr><td class="highlight">$110</td></tr>
+<tr><td class="highlight">$165</td></tr>
+<tr><td class="highlight">$220</td></tr>
+<tr><td class="highlight">$192.50</td></tr>
+</table>
+</div>
+</div>
+<div style="margin-top: 6px; font-size: 9px; color: #666;">
+Applies x*1.1 to each value automatically!
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">MAGIC!</div>
+<div class="resvalue" style="font-size: 14px;">All values × 1.1</div>
+<div class="resnote">One formula, many results</div>
+</div>
+</div>
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Batch calculations<br>• Array transformations<br>• Price adjustments<br>• Data processing
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Process arrays easily<br>• One formula<br>• Dynamic results<br>• Powerful & clean
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 365 only<br>• LAMBDA learning curve<br>• Spill errors<br>• Advanced concept
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 25: LET + MAP Combined -->
+<div class="slide">
+<div class="slide-number">25/27</div>
+<h1>🚀 LET + MAP - Ultimate Power Combo</h1>
+<div class="syntax">=LET(data, A2:A5, multiplier, 1.15, MAP(data, LAMBDA(x, x*multiplier)))</div>
+<div class="explain">
+<div class="exptitle">SYNTAX EXPLANATION</div>
+<div class="param"><strong>LET:</strong> Define variables (data range, multiplier)</div>
+<div class="param"><strong>MAP:</strong> Apply calculation using those variables</div>
+<div class="param"><strong>Result:</strong> Clean, readable, reusable, and powerful!</div>
+</div>
+<div class="example">=LET(prices, B2:B5, tax, 0.08, MAP(prices, LAMBDA(p, p*(1+tax))))</div>
+<div class="content">
+<div class="tableside">
+<div class="tablebox">
+<div style="display: table; width: 100%;">
+<div style="display: table-cell; width: 45%; padding-right: 8px;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">ORIGINAL PRICE</div>
+<table>
+<tr><th>Price</th></tr>
+<tr><td class="highlight">$100</td></tr>
+<tr><td class="highlight">$150</td></tr>
+<tr><td class="highlight">$200</td></tr>
+<tr><td class="highlight">$175</td></tr>
+</table>
+</div>
+<div style="display: table-cell; width: 55%;">
+<div style="font-weight: bold; font-size: 10px; margin-bottom: 4px;">WITH 8% TAX</div>
+<table>
+<tr><th>Final Price</th></tr>
+<tr><td class="highlight">$108</td></tr>
+<tr><td class="highlight">$162</td></tr>
+<tr><td class="highlight">$216</td></tr>
+<tr><td class="highlight">$189</td></tr>
+</table>
+</div>
+</div>
+<div style="margin-top: 8px; padding: 6px; background: #E6F9FF; border-left: 3px solid #0099FF; font-size: 9px;">
+<strong>Why This Rocks:</strong> Define tax rate once, apply to all prices, easy to update!
+</div>
+</div>
+</div>
+<div class="resultside">
+<div class="result">
+<div class="reslabel">POWER COMBO!</div>
+<div class="resvalue" style="font-size: 14px;">Clean + Dynamic</div>
+<div class="resnote">Professional Excel mastery</div>
+</div>
+</div>
+</div>
+<div class="inforow">
+<div class="infocol">
+<div class="usebox">
+<div class="infotitle">USE CASES</div>
+• Complex pricing<br>• Batch processing<br>• Professional models<br>• Advanced analytics
+</div>
+</div>
+<div class="infocol">
+<div class="probox">
+<div class="infotitle">ADVANTAGES</div>
+• Ultimate flexibility<br>• Very readable<br>• Easy to maintain<br>• Peak performance
+</div>
+</div>
+<div class="infocol">
+<div class="conbox">
+<div class="infotitle">LIMITATIONS</div>
+• Excel 365 only<br>• Advanced skill needed<br>• Not for beginners<br>• Requires practice
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 26: Formula Comparison -->
+<div class="slide">
+<div class="slide-number">26/27</div>
+<h1 style="font-size:24px;"> ⚖️ Formula Comparison Guide</h1>
+<div class="compbox">
+<div class="comptitle" style="font-size:18px;"> 🔍 LOOKUP FORMULAS - Which One to Use?</div>
+<div class="compitem" style="font-size:16px;"> <strong>VLOOKUP:</strong> Basic left-to-right lookups | Easy to learn | Use when: Simple tables, lookup column is leftmost</div>
+<div class="compitem" style="font-size:16px;"><strong>HLOOKUP:</strong> Horizontal data | Use when: Data is arranged in rows instead of columns</div>
+<div class="compitem"style="font-size:16px;"><strong>INDEX-MATCH:</strong> Professional standard | Works both directions | Use when: Need flexibility, lookup left, robust solution</div>
+<div class="compitem"style="font-size:16px;"><strong>XLOOKUP:</strong> Modern replacement for all above | Excel 365 only | Use when: You have Excel 365, want best solution</div>
+</div>
+<div class="compbox">
+<div class="comptitle" style="font-size:18px;"> ➕ SUM/COUNT/AVERAGE FAMILIES - Single vs Multiple Criteria</div>
+<div class="compitem" style="font-size:16px;"><strong>SUMIF/COUNTIF/AVERAGEIF:</strong> One condition | Simple syntax | Use when: One filtering criterion</div>
+<div class="compitem" style="font-size:16px;"><strong>SUMIFS/COUNTIFS/AVERAGEIFS:</strong> Multiple conditions | AND logic | Use when: Multiple filtering criteria</div>
+</div>
+<div class="compbox">
+<div class="comptitle" style="font-size:18px;"> ❓ IF FORMULAS - Choose Wisely</div>
+<div class="compitem" style="font-size:16px;"><strong>IF:</strong> One condition, two outcomes | Use when: Simple yes/no, pass/fail</div>
+<div class="compitem" style="font-size:16px;"><strong>Nested IF:</strong> Multiple conditions | Gets messy quickly | Use when: Excel 2016 or older</div>
+<div class="compitem" style="font-size:16px;"><strong>IFS:</strong> Multiple conditions, cleaner | Excel 2019+ | Use when: Available and need multiple conditions</div>
+</div>
+<div class="compbox">
+<div class="comptitle" style="font-size:18px;"> 🚀 MODERN FORMULAS - Excel 365 Power</div>
+<div class="compitem" style="font-size:16px;"><strong>LET:</strong> Name variables, improve readability | Use when: Complex formulas need organization</div>
+<div class="compitem" style="font-size:16px;"><strong>MAP:</strong> Apply function to arrays | Use when: Batch processing needed</div>
+<div class="compitem" style="font-size:16px;"><strong>UNIQUE:</strong> Extract unique values | Use when: Need to remove duplicates dynamically</div>
+<div class="compitem" style="font-size:16px;"><strong>LET + MAP:</strong> Ultimate combo | Use when: Maximum flexibility and readability needed</div>
+</div>
+</div>
+
+<!-- Slide 27: Final Summary -->
+<div class="slide">
+<div class="slide-number">27/27</div>
+<div style="text-align: center; padding-top: 40px;">
+<h1 style="font-size: 42px; color: #0066CC; margin-bottom: 25px;">🎯 You're Now an Excel Master!</h1>
+<div style="background: #E6F9F0; border: 3px solid #00CC66; border-radius: 15px; padding: 20px; margin: 20px 40px;">
+<div style="font-size: 20px; font-weight: bold; color: #006633; margin-bottom: 15px;">What You've Learned:</div>
+<div style="display: table; width: 100%; margin-top: 15px;">
+<div style="display: table-cell; width: 50%; padding: 0 10px; text-align: left;">
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>LOOKUP Family:</strong> VLOOKUP, HLOOKUP, XLOOKUP, INDEX-MATCH</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>SUM Family:</strong> SUMIF, SUMIFS with multiple criteria</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>COUNT Family:</strong> COUNTIF, COUNTIFS for data analysis</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>AVERAGE Family:</strong> AVERAGEIF, AVERAGEIFS</div>
+</div>
+<div style="display: table-cell; width: 50%; padding: 0 10px; text-align: left;">
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>IF Functions:</strong> IF, Nested IF, IFS</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>TEXT Functions:</strong> LEFT, RIGHT, MID, TEXTJOIN</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>DATE/TIME:</strong> TODAY, NOW, DATE functions</div>
+<div style="font-size: 18px; margin: 8px 0;">✅ <strong>Advanced:</strong> OFFSET, UNIQUE, LET, MAP</div>
+</div>
+</div>
+</div>
+<div style="background: #FFF9E6; border: 3px solid #FFCC00; border-radius: 15px; padding: 18px; margin: 25px 60px;">
+<div style="font-size: 18px; font-weight: bold; color: #CC9900; margin-bottom: 8px;">💡 Pro Tips for Success:</div>
+<div style="font-size: 18px; text-align: left; margin: 0 20px;">
+• Use <strong>INDEX-MATCH</strong> instead of VLOOKUP for professional models<br>
+• Leverage <strong>XLOOKUP</strong> if you have Excel 365 - it's game-changing<br>
+• Always use <strong>SUMIFS/COUNTIFS/AVERAGEIFS</strong> for multiple criteria<br>
+• Learn <strong>LET + MAP</strong> for next-level Excel mastery<br>
+• Practice combining formulas for powerful solutions!
+</div>
+</div>
+<div style="background: #E6E6FF; display: inline-block; padding: 15px 40px; border-radius: 20px; font-size: 18px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+🌟 Repost this on LinkedIn • Tag your colleagues • Level up together! 🌟
+</div>
+</div>
+</div>
+
+</body>
+</html>
